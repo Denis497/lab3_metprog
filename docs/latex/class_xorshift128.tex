@@ -1,0 +1,71 @@
+\doxysection{Xorshift128 Class Reference}
+\hypertarget{class_xorshift128}{}\label{class_xorshift128}\index{Xorshift128@{Xorshift128}}
+
+
+Генератор псевдослучайных чисел \doxylink{class_xorshift128}{Xorshift128}.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_xorshift128_a6aff32861867acc8f4b3d94e337fe097}{Xorshift128}} (uint64\+\_\+t seed)
+\begin{DoxyCompactList}\small\item\em Конструктор \doxylink{class_xorshift128}{Xorshift128}. \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{class_xorshift128_a9020d8857f82c152aab4d3854ae121a0}{next32}} ()
+\begin{DoxyCompactList}\small\item\em Сгенерировать следующее псевдослучайное 64-\/битное число \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{class_xorshift128_a08dc6da08b0654e7e7c6862145e4e0f5}{next}} ()
+\begin{DoxyCompactList}\small\item\em Сгенерировать следующее псевдослучайное 32-\/битное число \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Генератор псевдослучайных чисел \doxylink{class_xorshift128}{Xorshift128}. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_xorshift128_a6aff32861867acc8f4b3d94e337fe097}\index{Xorshift128@{Xorshift128}!Xorshift128@{Xorshift128}}
+\index{Xorshift128@{Xorshift128}!Xorshift128@{Xorshift128}}
+\doxysubsubsection{\texorpdfstring{Xorshift128()}{Xorshift128()}}
+{\footnotesize\ttfamily \label{class_xorshift128_a6aff32861867acc8f4b3d94e337fe097} 
+Xorshift128\+::\+Xorshift128 (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{seed}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Конструктор \doxylink{class_xorshift128}{Xorshift128}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em seed} & Начальное значение (семя) генератора \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_xorshift128_a08dc6da08b0654e7e7c6862145e4e0f5}\index{Xorshift128@{Xorshift128}!next@{next}}
+\index{next@{next}!Xorshift128@{Xorshift128}}
+\doxysubsubsection{\texorpdfstring{next()}{next()}}
+{\footnotesize\ttfamily \label{class_xorshift128_a08dc6da08b0654e7e7c6862145e4e0f5} 
+uint32\+\_\+t Xorshift128\+::next (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Сгенерировать следующее псевдослучайное 32-\/битное число 
+
+\begin{DoxyReturn}{Returns}
+Младшие 32 бита результата \doxylink{class_xorshift128_a9020d8857f82c152aab4d3854ae121a0}{next32()} 
+\end{DoxyReturn}
+\Hypertarget{class_xorshift128_a9020d8857f82c152aab4d3854ae121a0}\index{Xorshift128@{Xorshift128}!next32@{next32}}
+\index{next32@{next32}!Xorshift128@{Xorshift128}}
+\doxysubsubsection{\texorpdfstring{next32()}{next32()}}
+{\footnotesize\ttfamily \label{class_xorshift128_a9020d8857f82c152aab4d3854ae121a0} 
+uint64\+\_\+t Xorshift128\+::next32 (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Сгенерировать следующее псевдослучайное 64-\/битное число 
+
+\begin{DoxyReturn}{Returns}
+64-\/битный результат 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{main_8cpp}{main.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,155 @@
+\doxysection{main.\+cpp File Reference}
+\hypertarget{main_8cpp}{}\label{main_8cpp}\index{main.cpp@{main.cpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$random$>$}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include $<$chrono$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$iomanip$>$}\newline
+{\ttfamily \#include $<$cstdint$>$}\newline
+{\ttfamily \#include $<$cstring$>$}\newline
+Include dependency graph for main.\+cpp\+:
+% FIG 0
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_l_c_g}{LCG}}
+\begin{DoxyCompactList}\small\item\em Линейный конгруэнтный генератор псевдослучайных чисел (\doxylink{class_l_c_g}{LCG}) \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_xorshift32}{Xorshift32}}
+\begin{DoxyCompactList}\small\item\em Генератор псевдослучайных чисел \doxylink{class_xorshift32}{Xorshift32}. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_xorshift128}{Xorshift128}}
+\begin{DoxyCompactList}\small\item\em Генератор псевдослучайных чисел \doxylink{class_xorshift128}{Xorshift128}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{main_8cpp_a817049615892f91396d397a037e58762}{monobit\+TestP}} (const std\+::vector$<$ int $>$ \&bits)
+\begin{DoxyCompactList}\small\item\em Тест однобитовой (monobit) равномерности \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{main_8cpp_a5992dc44a88ace50533377cced708fdc}{block\+Frequency\+TestP}} (const std\+::vector$<$ int $>$ \&bits, int M=128)
+\begin{DoxyCompactList}\small\item\em Тест блочной частотности (block frequency) \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{main_8cpp_ad29b768e1b42c5451b454957de0aff1c}{runs\+TestP}} (const std\+::vector$<$ int $>$ \&bits)
+\begin{DoxyCompactList}\small\item\em Тест числа серий (runs test) \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{main_8cpp_a4b119fffb47dc10148ab483056f4f382}{longest\+Run\+Ones\+TestP}} (const std\+::vector$<$ int $>$ \&bits)
+\begin{DoxyCompactList}\small\item\em Тест самой длинной серии из единиц (longest run of ones) \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{main_8cpp_a21a7175136055f14facddfd822711721}{cumulative\+Sums\+TestP}} (const std\+::vector$<$ int $>$ \&bits)
+\begin{DoxyCompactList}\small\item\em Тест кумулятивных сумм (cumulative sums test) \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\begin{DoxyCompactList}\small\item\em Точка входа\+: измерение характеристик генераторов и статистические тесты \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{main_8cpp_a5992dc44a88ace50533377cced708fdc}\index{main.cpp@{main.cpp}!blockFrequencyTestP@{blockFrequencyTestP}}
+\index{blockFrequencyTestP@{blockFrequencyTestP}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{blockFrequencyTestP()}{blockFrequencyTestP()}}
+{\footnotesize\ttfamily \label{main_8cpp_a5992dc44a88ace50533377cced708fdc} 
+double block\+Frequency\+TestP (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ int $>$ \&}]{bits}{, }\item[{int}]{M}{ = {\ttfamily 128}}\end{DoxyParamCaption})}
+
+
+
+Тест блочной частотности (block frequency) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bits} & Вектор бит \\
+\hline
+{\em M} & Размер блока (по умолчанию 128) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+p-\/значение теста 
+\end{DoxyReturn}
+\Hypertarget{main_8cpp_a21a7175136055f14facddfd822711721}\index{main.cpp@{main.cpp}!cumulativeSumsTestP@{cumulativeSumsTestP}}
+\index{cumulativeSumsTestP@{cumulativeSumsTestP}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{cumulativeSumsTestP()}{cumulativeSumsTestP()}}
+{\footnotesize\ttfamily \label{main_8cpp_a21a7175136055f14facddfd822711721} 
+double cumulative\+Sums\+TestP (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ int $>$ \&}]{bits}{}\end{DoxyParamCaption})}
+
+
+
+Тест кумулятивных сумм (cumulative sums test) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bits} & Вектор бит \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+p-\/значение теста 
+\end{DoxyReturn}
+\Hypertarget{main_8cpp_a4b119fffb47dc10148ab483056f4f382}\index{main.cpp@{main.cpp}!longestRunOnesTestP@{longestRunOnesTestP}}
+\index{longestRunOnesTestP@{longestRunOnesTestP}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{longestRunOnesTestP()}{longestRunOnesTestP()}}
+{\footnotesize\ttfamily \label{main_8cpp_a4b119fffb47dc10148ab483056f4f382} 
+double longest\+Run\+Ones\+TestP (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ int $>$ \&}]{bits}{}\end{DoxyParamCaption})}
+
+
+
+Тест самой длинной серии из единиц (longest run of ones) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bits} & Вектор бит \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+p-\/значение теста 
+\end{DoxyReturn}
+\Hypertarget{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\index{main.cpp@{main.cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4} 
+int main (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Точка входа\+: измерение характеристик генераторов и статистические тесты 
+
+\begin{DoxyReturn}{Returns}
+Код возврата (0 при успешном завершении) 
+\end{DoxyReturn}
+\texorpdfstring{$<$}{<} Количество выборок на метод
+
+\texorpdfstring{$<$}{<} Размер одной выборки
+
+\texorpdfstring{$<$}{<} Базовое семя для \doxylink{class_l_c_g}{LCG}
+
+\texorpdfstring{$<$}{<} Базовое семя для \doxylink{class_xorshift32}{Xorshift32}
+
+\texorpdfstring{$<$}{<} Базовое семя для \doxylink{class_xorshift128}{Xorshift128}
+
+\texorpdfstring{$<$}{<} Базовое семя для std\+::mt19937\Hypertarget{main_8cpp_a817049615892f91396d397a037e58762}\index{main.cpp@{main.cpp}!monobitTestP@{monobitTestP}}
+\index{monobitTestP@{monobitTestP}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{monobitTestP()}{monobitTestP()}}
+{\footnotesize\ttfamily \label{main_8cpp_a817049615892f91396d397a037e58762} 
+double monobit\+TestP (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ int $>$ \&}]{bits}{}\end{DoxyParamCaption})}
+
+
+
+Тест однобитовой (monobit) равномерности 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bits} & Вектор бит (0 или 1) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+p-\/значение теста 
+\end{DoxyReturn}
+\Hypertarget{main_8cpp_ad29b768e1b42c5451b454957de0aff1c}\index{main.cpp@{main.cpp}!runsTestP@{runsTestP}}
+\index{runsTestP@{runsTestP}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{runsTestP()}{runsTestP()}}
+{\footnotesize\ttfamily \label{main_8cpp_ad29b768e1b42c5451b454957de0aff1c} 
+double runs\+TestP (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ int $>$ \&}]{bits}{}\end{DoxyParamCaption})}
+
+
+
+Тест числа серий (runs test) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bits} & Вектор бит \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+p-\/значение теста 
+\end{DoxyReturn}
