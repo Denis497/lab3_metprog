@@ -370,18 +370,19 @@ double cumulativeSumsTestP(const std::vector<int>& bits) {
         if (cumSum < minDep) minDep = cumSum;
     }
     long maxAbs = std::max(std::llabs(maxDep), std::llabs(minDep));
-    double z = maxAbs / sqrt(n);
+    double zs = maxAbs / sqrt(n);
+    double z = maxAbs;
     double p = 1.0;
     int k_start = (int)ceil(( - (double)n / z + 1.0) / 4.0);
     int k_end   = (int)floor((   (double)n / z - 1.0) / 4.0);
     for (int k = k_start; k <= k_end; ++k) {
-        double term = Phi((4*k + 1) * z) - Phi((4*k - 1) * z);
+        double term = Phi((4*k + 1) * zs) - Phi((4*k - 1) * zs);
         p -= term;
     }
-    k_start = (int)ceil(( - (double)n / z - 1.0) / 4.0);
-    k_end   = (int)floor((   (double)n / z - 3.0) / 4.0);
+    k_start = (int)ceil(( - (double)n / z - 3.0) / 4.0);
+    k_end   = (int)floor((   (double)n / z - 1.0) / 4.0);
     for (int k = k_start; k <= k_end; ++k) {
-        double term = Phi((4*k + 3) * z) - Phi((4*k + 1) * z);
+        double term = Phi((4*k + 3) * zs) - Phi((4*k + 1) * zs);
         p += term;
     }
     return p;
