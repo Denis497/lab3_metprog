@@ -369,7 +369,7 @@ double cumulativeSumsTestP(const std::vector<int>& bits) {
         if (cumSum > maxDep) maxDep = cumSum;
         if (cumSum < minDep) minDep = cumSum;
     }
-    long maxAbs = std::max(std::llabs(maxDep), std::llabs(minDep));
+    long maxAbs = std::max(std::labs(maxDep), std::labs(minDep));
     double zs = maxAbs / sqrt(n);
     double z = maxAbs;
     double p = 1.0;
