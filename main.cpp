@@ -7,6 +7,7 @@
 #include <iomanip>
 #include <cstdint>
 #include <cstring>
+#include <array>
 
 /**
  * @brief Линейный конгруэнтный генератор псевдослучайных чисел (LCG)
