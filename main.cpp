@@ -253,7 +253,7 @@ double runsTestP(const std::vector<int>& bits) {
         if (b == 1) count1++;
     }
     double pi = (double)count1 / n;
-    if (fabs(pi - 0.5) > (2.0 / sqrt(n))) {
+    if (fabs(pi - 0.5) >= (2.0 / sqrt(n))) {
         return 0.0;
     }
     int runs = 1;
